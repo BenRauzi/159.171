@@ -1,0 +1,5 @@
+r_1 = int(input("Enter the resistance for R1:"))
+r_2 = int(input("Enter the resistance for R2:"))
+r_3 = int(input("Enter the resistance for R3:"))
+r_total = 1 / (1 / r_1 + 1 / r_2 + 1 / r_3)
+print("The combined resistance of R1, R2 and R3 is {:.2f} ohms.".format(r_total))

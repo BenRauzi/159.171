@@ -1,1 +1,1 @@
-print(input().lower())M
+print(input().lower())

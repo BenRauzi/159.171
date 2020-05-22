@@ -17,7 +17,7 @@ def add_order(): #add an order to the orders
             print("Bad Pizza Name! - Pizza must be a valid pizza")
             continue
         try:
-            quantity =  int(input("Enter Quantity: "))
+            quantity =  int(input("Enter Quantity: ")) #num of pizzas to order (int)
             if quantity <= 0:
                 raise ValueError
         except ValueError: #retry if quantity is not a valid input (not an integer or < 0)

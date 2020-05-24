@@ -8,6 +8,7 @@ def order(): #ordering function asks the user what they want to order
         pick = int(input("What would you like to order? (Put in the Number)\n"))
         if pick > 0 and pick < len(pizza_flavours):#only procceds if the number user chose is inbetween the values of the list
             pick -= 1
+            print(pizza_flavours[pick])
             receipt.append(pizza_flavours[pick])
             print(receipt)
         else: #if user picks negative or higher than 8 re runs the function

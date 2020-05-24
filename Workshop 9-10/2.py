@@ -26,7 +26,7 @@ def make_order():
 
     ordered_items = []
     while True:
-        command = input("Input food number: (q or Q to quit)")
+        command = input("Input food number: (q or Q to quit) ")
 
         if command.lower() == 'q':
             break
@@ -36,7 +36,7 @@ def make_order():
             
             item_number = int(command)
 
-            if item_number > len(menu):
+            if item_number > len(menu) or item_number <= 0:
                 print("Please select a food that is in the menu list.")
                 continue
             

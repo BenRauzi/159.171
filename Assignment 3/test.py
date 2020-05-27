@@ -1,6 +1,5 @@
-import Assignment
+import assignment
 
-print(Assignment.createDictionaries("dict.txt"))
-print(Assignment.encode("a"))
-print(Assignment.decode("d"))
-print(Assignment)
+print(assignment.createDictionaries("dict.txt"))
+print(assignment.encode("abc"))
+print(assignment.decode("def"))

@@ -3,6 +3,7 @@ Allows user to define convention for encoding string from one to another using a
 Function createDictionaries() must be called and succeed before encode() or decode() is called
 """
 
+encoding, decoding = {}, {} #initialises a dict so that the field is always present, even if createDictionaries() has not been called
 
 def createDictionaries(path):
     """
@@ -17,7 +18,7 @@ def createDictionaries(path):
         3 - A decoded character exists twice or more
         4 - An encoded character exists twice or more
     """
-    encoding_temp, decoding_temp = {}, {}
+    encoding_temp, decoding_temp = {}, {} #temp vars so the global var will only update if function succeeds 
     try:
         dict_file = open(path, "r")
     except FileNotFoundError:
@@ -50,7 +51,7 @@ def encode(raw_string):
         Input: Raw String
         Output: Encoded String 
                 or 
-                ##### -  Error, one or more chars in string does not have a corresponding encoded character
+                ##### -  Error, one or more chars in string does not have a corresponding encoded character, or createDictionaries() has not been run successfully
     """
     encoded_string = ""
     for char in raw_string:
@@ -69,13 +70,13 @@ def decode(encoded_string):
         Input: Encoded String
         Output: Decoded String 
                 or 
-                ##### -  Error, one or more chars in string does not have a corresponding decoded character
+                ##### -  Error, one or more chars in string does not have a corresponding decoded character, or createDictionaries() has not been run successfully
     """
     raw_string = ""
     for char in encoded_string:
         try:
             raw_string += decoding[char] #fetches and appends correct corresponding decoded character
         except KeyError:
-            return encoded_string
+            return "#####"
             
     return raw_string

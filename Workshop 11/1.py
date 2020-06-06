@@ -14,3 +14,14 @@ class NZFood(Food):
 
 def createFood(food_list):
     return [Food(i[0], i[1]) for i in food_list]
+
+
+class Test:
+    def __init__(self, name):
+        self.name = name
+    def __str__(self):
+        return self.name
+
+new_test = Test("Ben")
+
+print(new_test)

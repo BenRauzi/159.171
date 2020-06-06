@@ -11,7 +11,13 @@ food_list = [Food(i.split(',')) for i in food_file.readlines()[1:]] #reads file,
 food_file.close()
 
 lowest_calories = min(food_list, key=lambda x: x.calories)
+#demo
+#lowest = food_list[0]
+#for i in food_list:
+#    if i.calories < lowest.calories:
+#        lowest=i
 
+#print(lowest.name)
 print(f"Food with lowest calories: {lowest_calories.name}, {lowest_calories.calories} calories, {lowest_calories.carbs} carbs.")
 
 no_carbs = sorted([i for i in food_list if i.carbs == 0 and i.name != None], key=lambda x: x.name)

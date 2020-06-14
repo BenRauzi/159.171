@@ -53,5 +53,3 @@ def make_order():
     show_menu(ordered_items)
 
 make_order()
-        
-

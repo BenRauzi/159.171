@@ -16,19 +16,3 @@ class Queue():
 
 	def __str__(self):
 		return str(self.items)
-
-queue = Queue()
-
-queue.enqueue(1)
-
-import time
-
-time_1 = time.time()
-for i in range(99999):
-	queue.enqueue(i)
-
-time_2 = time.time()
-
-print(time_2 - time_1)
-
-#O(n^2)

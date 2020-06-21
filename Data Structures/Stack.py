@@ -19,9 +19,3 @@ class Stack:
 
 	def __str__(self):
 		return str(self.peek())
-
-stack = Stack()
-stack.push(0)
-print(stack)
-
-#O(n)
